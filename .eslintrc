@@ -1,0 +1,6 @@
+{
+  "extend":"airbnb",
+  "rules":{
+    "comma-dangle":["error","never"]
+  }
+}

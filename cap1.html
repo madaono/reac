@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>Title</title>
+</head>
+
+<body>
+    <script type="text/babel">
+      let kitty = {
+          age:1,
+          grow:function () {
+              setTimeout(()=>{
+                  document.write(this.age);
+              },100);
+          }
+      };
+      kitty.grow();
+        //函数的默认参数
+        function desc(name='Peter',age=5) {
+            return name + ' is '+age+' years old';
+        }
+        document.write(desc());
+
+
+        //rest 参数
+        function test1(name, ...args) {
+            console.log(args);
+        }
+        test1('peter',2,2,3);
+
+        /*const bar  = require('./bar');
+        module.exports = function () {
+            //路径的话最好使用const来定义
+        };*/
+
+        //ES6的模块暴露
+        /*import bar from './bar';
+        export default function () {
+        };*/
+
+        /*
+        * 包（package）和模块（module）的区别和联系：
+        *   包是一个用package.json文件描述的文件夹或者文件。
+        *   而模块的要求更为具体-模块指的是任何可以被NODEJS中的REQUIRE方法载入的文件。
+        *   所有的模块都是包但不是所有的包都是模块，比如一些CLI包只包括可执行的命令行工具
+        *
+        *
+        * */
+        /*
+        * 模块热替换
+        * 配合style-loader样式模块可以被热替换
+        * 配合react-hot-loader可以对React class模块进行热替换
+        * 配置webpack启用这一功能也相当简单，通过参数--hot启动webpack-dev-server\
+        * webpack-dev-server --hot
+        * */
+
+
+        /*
+        *
+        *
+        * */
+
+
+    </script>
+</body>
+</html>
